@@ -36,3 +36,10 @@ void insere(ListaSimplesmenteEncadeada &lista, int conteudo)
     lista.inicio = novoNode;
     lista.cardinalidade++;
 }
+
+bool Lista_Vazia(ListaSimplesmenteEncadeada* Lista){
+
+    return (Lista->inicio == 0);
+
+}
+

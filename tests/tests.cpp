@@ -69,8 +69,22 @@ void teste_destroiLista() {
     cout << "destroiLista() passou em todos os testes" << endl;
 }
 
+// Testa se lista esta vazia
+void teste_Lista_Vazia() {
+    cout << "Testando Lista_Vazia()..." << endl;
+
+  
+    ListaSimplesmenteEncadeada* lista = criaLista();
+
+    
+    assert(Lista_Vazia(lista));
+
+    free(lista);
+    cout << "Lista_Vazia() passou em todos os testes" << endl;
+}
 // ===== FUNÇÃO PRINCIPAL =====
 int main() {
+
     cout << "\n=========================================" << endl;
     cout << "  INICIANDO TESTES DE LINKED LIST" << endl;
     cout << "=========================================" << endl << endl;
@@ -79,6 +93,7 @@ int main() {
         teste_criaLista();
         teste_insere();
         teste_destroiLista();
+        teste_Lista_Vazia();
 
         cout << "\n=========================================" << endl;
         cout << "  TODOS OS TESTES PASSARAM COM SUCESSO!" << endl;
@@ -93,3 +108,4 @@ int main() {
         return 1;
     }
 }
+

@@ -14,5 +14,5 @@ struct ListaSimplesmenteEncadeada {
 ListaSimplesmenteEncadeada* criaLista();
 void destroiLista(ListaSimplesmenteEncadeada &lista);
 void insere(ListaSimplesmenteEncadeada &lista, int conteudo);
-
-#endif // LINKED_LIST_H
+bool Lista_Vazia(ListaSimplesmenteEncadeada* Lista);
+#endif // LINKED_LIST_

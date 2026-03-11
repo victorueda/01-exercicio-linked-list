@@ -25,7 +25,7 @@
                 }
             ],
             "preLaunchTask": "build project",
-            "miDebuggerPath": "/usr/bin/gdb"
+            "miDebuggerPath": "gdb"
         },
         {
             "name": "Debug Tests",
@@ -51,7 +51,7 @@
                 }
             ],
             "preLaunchTask": "build tests",
-            "miDebuggerPath": "/usr/bin/gdb"
+            "miDebuggerPath": "gdb"
         }
     ]
 }
