@@ -25,7 +25,8 @@
                 }
             ],
             "preLaunchTask": "build project",
-            "miDebuggerPath": "gdb"
+            "miDebuggerPath": "C:/msys64/mingw64/bin/gdb.exe"
+        
         },
         {
             "name": "Debug Tests",

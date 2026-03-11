@@ -55,7 +55,7 @@ void Mostra_Lista (ListaSimplesmenteEncadeada* Lista)
     cout << endl;
     }
     
-int Return_Cardinalidade (ListaSimplesmenteEncadeada* lista)
+int Return_Cardinalidade (ListaSimplesmenteEncadeada* Lista)
 {
     return Lista->cardinalidade;
 }

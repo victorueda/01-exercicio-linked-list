@@ -94,10 +94,24 @@ void  teste_Mostra_lista()
      insere(*Lista,30);
      Mostra_Lista(Lista);
      
-     destroiLista(Lista);
+     destroiLista(*Lista);
     
     free(Lista);
     }   
+
+// Testa Return Cardinalidade
+void teste_Return_Cardinalidade()
+{
+    cout << "Testando Return_Cardinalidade()... " << endl;
+    ListaSimplesmenteEncadeada* Lista = criaLista();
+    insere(*Lista,10);
+    insere(*Lista,20);
+    insere(*Lista,30);
+    assert(Return_Cardinalidade(Lista) == 3);
+    cout << "Return_Cardinalidade() passou em todos os testes" << endl;
+
+    destroiLista(*Lista);
+    free(Lista);}
 
 // ===== FUNÇÃO PRINCIPAL =====
 int main() {
@@ -112,8 +126,7 @@ int main() {
         teste_destroiLista();
         teste_Lista_Vazia();
         teste_Mostra_lista();
-        teste_Mostra_lista();
-
+        teste_Return_Cardinalidade();
         cout << "\n=========================================" << endl;
         cout << "  TODOS OS TESTES PASSARAM COM SUCESSO!" << endl;
         cout << "=========================================" << endl << endl;
