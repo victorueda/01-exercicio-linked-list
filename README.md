@@ -7,7 +7,7 @@ Exercício com Lista Simplesmente Encadeada (Linked List).
 - [x] Criação/Inicialização: criar uma lista vazia
 - [x] Inserção: início da lista
 - [x] Liberar lista (destroi): Liberar a memória da lista
-- [ ] Mostrar lista: imprime os elementos da lista
+- [x] Mostrar lista: imprime os elementos da lista
 - [x] Lista Vazia: verifica se lista está vazia
 - [ ] Número de Elementos: quantidade de elementos na lista
 - [ ] Inserção: posição específica

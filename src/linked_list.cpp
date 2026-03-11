@@ -39,7 +39,26 @@ void insere(ListaSimplesmenteEncadeada &lista, int conteudo)
 
 bool Lista_Vazia(ListaSimplesmenteEncadeada* Lista){
 
-    return (Lista->inicio == 0);
+    return (Lista->inicio == nullptr);
 
 }
+
+void Mostra_Lista (ListaSimplesmenteEncadeada* Lista)
+    {
+        Node* atual = Lista -> inicio;
+        while (atual != nullptr)
+        {
+            cout << atual -> conteudo << " ";
+            atual = atual -> proximo;
+        }
+        
+    cout << endl;
+    }
+    
+int Return_Cardinalidade (ListaSimplesmenteEncadeada* lista)
+{
+    return Lista->cardinalidade;
+}
+
+
 

@@ -82,6 +82,23 @@ void teste_Lista_Vazia() {
     free(lista);
     cout << "Lista_Vazia() passou em todos os testes" << endl;
 }
+
+// Testa mostra Lista
+void  teste_Mostra_lista()
+{
+     cout << "Testando Demonstração de Lista()..." << endl;
+
+     ListaSimplesmenteEncadeada* Lista = criaLista();
+     insere(*Lista,10);
+     insere(*Lista,20);
+     insere(*Lista,30);
+     Mostra_Lista(Lista);
+     
+     destroiLista(Lista);
+    
+    free(Lista);
+    }   
+
 // ===== FUNÇÃO PRINCIPAL =====
 int main() {
 
@@ -94,6 +111,8 @@ int main() {
         teste_insere();
         teste_destroiLista();
         teste_Lista_Vazia();
+        teste_Mostra_lista();
+        teste_Mostra_lista();
 
         cout << "\n=========================================" << endl;
         cout << "  TODOS OS TESTES PASSARAM COM SUCESSO!" << endl;
