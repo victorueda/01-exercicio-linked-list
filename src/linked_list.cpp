@@ -62,3 +62,37 @@ int Return_Cardinalidade (ListaSimplesmenteEncadeada* Lista)
 
 
 
+void Insere_Especifico(ListaSimplesmenteEncadeada* lista, int n, int valor)
+{
+    Node* novo = (Node*) malloc(sizeof(Node));
+    novo->conteudo = valor;
+
+      if (n == 0 || lista->inicio == nullptr)
+    {
+        novo->proximo = lista->inicio;
+        lista->inicio = novo;
+        lista->cardinalidade++;
+        return;
+    }
+
+    Node* atual = lista->inicio;
+
+    int i = 0;
+
+    while (i < n-1 && atual != nullptr)
+    {
+        atual = atual->proximo;
+        i++;
+    }
+
+    novo->proximo = atual->proximo;
+    atual->proximo = novo;
+    lista->cardinalidade ++;
+}
+
+void Remove_Elemento (ListaSimplesmenteEncadeada* Lista,int valor)
+{
+
+}
+
+

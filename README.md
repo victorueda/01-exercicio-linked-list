@@ -9,8 +9,8 @@ Exercício com Lista Simplesmente Encadeada (Linked List).
 - [x] Liberar lista (destroi): Liberar a memória da lista
 - [x] Mostrar lista: imprime os elementos da lista
 - [x] Lista Vazia: verifica se lista está vazia
-- [ ] Número de Elementos: quantidade de elementos na lista
-- [ ] Inserção: posição específica
+- [x] Número de Elementos: quantidade de elementos na lista
+- [x] Inserção: posição específica
 - [ ] Remoção: elemento (node) de posição específica
 - [ ] Inversão: Inverter os elementos da lista
 

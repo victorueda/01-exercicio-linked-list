@@ -16,6 +16,8 @@ void destroiLista(ListaSimplesmenteEncadeada &lista);
 void insere(ListaSimplesmenteEncadeada &lista, int conteudo);
 bool Lista_Vazia(ListaSimplesmenteEncadeada* Lista);
 void Mostra_Lista(ListaSimplesmenteEncadeada* Lista);
-int Return_Cardinalidade (ListaSimplesmenteEncadeada* lista);
+int Return_Cardinalidade (ListaSimplesmenteEncadeada* Lista);
+void Insere_Especifico (ListaSimplesmenteEncadeada* Lista,int n, int valor);
+void Remove_Elemento (ListaSimplesmenteEncadeada* Lista, int valor);
 
 #endif // LINKED_LIST_H

@@ -113,6 +113,21 @@ void teste_Return_Cardinalidade()
     destroiLista(*Lista);
     free(Lista);}
 
+void teste_insere_Especifico()
+{
+  cout << "Testando Insere_Especifico()... " << endl;
+    ListaSimplesmenteEncadeada* Lista = criaLista();   
+    insere(*Lista,10);
+
+    Insere_Especifico(Lista,1,20);
+    Insere_Especifico(Lista,1,15);
+
+    assert(Lista->inicio->conteudo == 10);
+    assert(Lista->inicio->proximo->conteudo == 15);
+    assert(Lista->inicio->proximo->proximo->conteudo == 20);
+      cout << "Insere_Especifico() passou em todos os testes" << endl;
+}
+
 // ===== FUNÇÃO PRINCIPAL =====
 int main() {
 
@@ -127,6 +142,7 @@ int main() {
         teste_Lista_Vazia();
         teste_Mostra_lista();
         teste_Return_Cardinalidade();
+        teste_insere_Especifico();
         cout << "\n=========================================" << endl;
         cout << "  TODOS OS TESTES PASSARAM COM SUCESSO!" << endl;
         cout << "=========================================" << endl << endl;
