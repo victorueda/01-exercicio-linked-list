@@ -11,8 +11,8 @@ Exercício com Lista Simplesmente Encadeada (Linked List).
 - [x] Lista Vazia: verifica se lista está vazia
 - [x] Número de Elementos: quantidade de elementos na lista
 - [x] Inserção: posição específica
-- [ ] Remoção: elemento (node) de posição específica
-- [ ] Inversão: Inverter os elementos da lista
+- [x] Remoção: elemento (node) de posição específica
+- [x] Inversão: Inverter os elementos da lista
 
 ## Pré-requisitos
 

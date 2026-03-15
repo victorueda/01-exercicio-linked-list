@@ -19,5 +19,5 @@ void Mostra_Lista(ListaSimplesmenteEncadeada* Lista);
 int Return_Cardinalidade (ListaSimplesmenteEncadeada* Lista);
 void Insere_Especifico (ListaSimplesmenteEncadeada* Lista,int n, int valor);
 void Remove_Elemento (ListaSimplesmenteEncadeada* Lista, int valor);
-
+void Inverter_Lista(ListaSimplesmenteEncadeada* Lista);
 #endif // LINKED_LIST_H

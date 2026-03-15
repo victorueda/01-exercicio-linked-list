@@ -92,7 +92,48 @@ void Insere_Especifico(ListaSimplesmenteEncadeada* lista, int n, int valor)
 
 void Remove_Elemento (ListaSimplesmenteEncadeada* Lista,int valor)
 {
+    Node* atual = Lista-> inicio;
+    Node* anterior = nullptr;
 
+    while (atual != nullptr && atual -> conteudo != valor)
+    {
+        anterior = atual;
+        atual = atual -> proximo;
+    }
+
+    if(atual == nullptr)
+    {
+        cout << "Valor não encontrado na lista" << endl;
+        return;
+    }else if( anterior == nullptr)
+    {
+        Lista->inicio = atual->proximo;
+       
+    }
+    else
+    {
+        anterior->proximo = atual -> proximo;   
+       
+    }
+
+     free(atual);
+     Lista->cardinalidade--;
 }
 
+void Inverter_Lista(ListaSimplesmenteEncadeada* Lista)
+{
+    Node* anterior = nullptr;
+    Node* atual = Lista->inicio;
+    Node* proximo = nullptr;
+
+    while (atual != nullptr)
+    {
+        proximo = atual->proximo;
+        atual->proximo = anterior;
+        anterior = atual;
+        atual = proximo;
+    }
+
+    Lista->inicio = anterior;
+}
 
