@@ -4,11 +4,13 @@
 struct Node {
     int conteudo;
     Node* proximo;
+    Node* anterior;
 };
 
 struct ListaSimplesmenteEncadeada {
     int cardinalidade;
     Node* inicio;
+    Node* Fim;
 };
 
 ListaSimplesmenteEncadeada* criaLista();

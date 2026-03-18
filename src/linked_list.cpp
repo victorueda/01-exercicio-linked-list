@@ -9,6 +9,7 @@ ListaSimplesmenteEncadeada* criaLista()
     ListaSimplesmenteEncadeada* lista = (ListaSimplesmenteEncadeada*) malloc(sizeof(ListaSimplesmenteEncadeada));
     lista->cardinalidade = 0;
     lista->inicio = NULL;
+    lista->Fim = NULL;
     return lista;
 }
 
@@ -32,6 +33,15 @@ void insere(ListaSimplesmenteEncadeada &lista, int conteudo)
 
     novoNode->conteudo = conteudo;
     novoNode->proximo = lista.inicio;
+    novoNode->anterior = nullptr;
+
+     if (lista.inicio != nullptr)
+      {
+        lista.inicio->anterior = novoNode;
+    }else{
+        lista.Fim = novoNode;
+    }
+
 
     lista.inicio = novoNode;
     lista.cardinalidade++;
@@ -39,7 +49,7 @@ void insere(ListaSimplesmenteEncadeada &lista, int conteudo)
 
 bool Lista_Vazia(ListaSimplesmenteEncadeada* Lista){
 
-    return (Lista->inicio == nullptr);
+     return (Lista->inicio == nullptr);
 
 }
 
@@ -89,15 +99,15 @@ void Insere_Especifico(ListaSimplesmenteEncadeada* lista, int n, int valor)
     atual->proximo = novo;
     lista->cardinalidade ++;
 }
-
-void Remove_Elemento (ListaSimplesmenteEncadeada* Lista,int valor)
+//incompleto. Atualize para duplamente encadeada
+void Remove_Elemento (ListaSimplesmenteEncadeada* Lista,Node* valor)
 {
     Node* atual = Lista-> inicio;
-    Node* anterior = nullptr;
+    
 
     while (atual != nullptr && atual -> conteudo != valor)
     {
-        anterior = atual;
+        atual->anterior = atual;
         atual = atual -> proximo;
     }
 
@@ -105,14 +115,14 @@ void Remove_Elemento (ListaSimplesmenteEncadeada* Lista,int valor)
     {
         cout << "Valor não encontrado na lista" << endl;
         return;
-    }else if( anterior == nullptr)
+    }else if( atual->anterior == nullptr)
     {
         Lista->inicio = atual->proximo;
        
     }
     else
     {
-        anterior->proximo = atual -> proximo;   
+        atual->anterior->proximo = atual -> proximo;   
        
     }
 
